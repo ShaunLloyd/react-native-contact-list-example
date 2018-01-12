@@ -12,8 +12,8 @@ dependencies:
 
 test:
   override:
-    - yarn test
     - yarn lint
+    - yarn test
 
 general:
   artifacts:
