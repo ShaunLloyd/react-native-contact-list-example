@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:clean": "yarn run clean:build && yarn run clean:watchman && yarn run clean:npm && yarn run clean:packager",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 8 Plus\"",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "clean": "yarn run clean:build && yarn run clean:watchman && yarn run clean:npm && yarn run clean:packager",
     "clean:build": "rm -rf ./ios/build",
     "clean:npm": "rm -rf ./node_modules && yarn",
     "clean:packager": "react-native start --reset-cache",
