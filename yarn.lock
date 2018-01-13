@@ -3836,9 +3836,9 @@ react-native-locale-detector@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-locale-detector/-/react-native-locale-detector-1.0.1.tgz#c002261ecb60619e5952257c8c7fa31c2c15ed30"
 
-react-native-navigation@^1.1.256:
-  version "1.1.256"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.256.tgz#1449753faf3f104c0060c883d8b82494309cd607"
+react-native-navigation@^1.1.336:
+  version "1.1.336"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.336.tgz#26ed5a54091910ae0a9cb9d7b51ea1474b2b736e"
   dependencies:
     lodash "4.x.x"
 
