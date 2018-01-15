@@ -1,4 +1,4 @@
-import { compose, withHandlers } from 'recompose';
+import { compose, withHandlers, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
 import { mapDispatchers } from 'utils';
 
@@ -12,6 +12,7 @@ import {
   deselectContact,
   setShowOnlySelected,
   setFetchingContacts,
+  fetchContacts,
 } from './contacts.actions';
 
 const dispatchers = mapDispatchers({
@@ -21,6 +22,7 @@ const dispatchers = mapDispatchers({
   deselectContact,
   setShowOnlySelected,
   setFetchingContacts,
+  fetchContacts,
 });
 
 export const ContactsContainer = compose(
@@ -31,5 +33,10 @@ export const ContactsContainer = compose(
       : props.selectContact(contact.recordID),
     toggleShowSelectedOnly: props => () =>
       props.setShowOnlySelected(!props.showOnlySelected),
+  }),
+  lifecycle({
+    componentDidMount() {
+      this.props.fetchContacts();
+    },
   }),
 )(ContactsComponent);

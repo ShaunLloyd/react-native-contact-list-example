@@ -9,6 +9,7 @@ const sortContactsByGivenName = R.sortBy(R.prop('givenName'));
 const contactsSelector = R.path(['contactsList', 'contacts']);
 const selectedContactsSelector = R.path(['contactsList', 'selectedContacts']);
 const showOnlySelectedSelector = R.path(['contactsList', 'showOnlySelected']);
+const isFetchingContactsSelector = R.path(['contactsList', 'isFetchingContacts']);
 
 const contactsListSelector = createSelector(
   contactsSelector,
@@ -32,4 +33,5 @@ const contactsForDisplaySelector = createSelector(
 export const contactsConnector = createStructuredSelector({
   contacts: contactsForDisplaySelector,
   showOnlySelected: showOnlySelectedSelector,
+  isFetchingContacts: isFetchingContactsSelector,
 });
