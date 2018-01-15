@@ -5,4 +5,7 @@ export const en = {
     buttonDecrement: 'Decrement',
     toggleText: 'Is Counter Button Active?',
   },
+  contactsList: {
+    header: 'Contacts',
+  },
 };

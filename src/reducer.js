@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import { exampleReducer } from 'scenes/example';
+import { contactsReducer } from 'scenes/contacts';
 
 export const rootReducer = combineReducers({
-  example: exampleReducer,
+  contactsList: contactsReducer,
 });

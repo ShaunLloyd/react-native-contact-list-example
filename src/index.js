@@ -12,8 +12,7 @@ const initializeApp = () => {
     Provider,
     {
       screen: {
-        screen: 'view.example-view',
-        title: 'React Native Starter',
+        screen: 'view.contacts-list',
         navigatorStyle: {
           navBarHidden: true,
         },
