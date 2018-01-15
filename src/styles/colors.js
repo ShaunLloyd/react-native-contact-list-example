@@ -6,6 +6,7 @@ export const palette = {
   near_black: '#2B2B2B',
   white: '#FFFFFF',
   light_silver: '#AAAAAA',
+  error: '#e73827',
   transparent: 'transparent',
 };
 

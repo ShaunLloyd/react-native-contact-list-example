@@ -1,4 +1,5 @@
 import Contacts from 'react-native-contacts';
+import type { NewContact } from 'common';
 
 export const fetchContactsService = () =>
   new Promise((resolve, reject) => {
@@ -12,3 +13,10 @@ export const transfromContactsFromDevice = contacts =>
     familyName,
     phoneNumbers,
   }));
+
+export const addContactService = (contact: NewContact) =>
+  new Promise((resolve, reject) => {
+    Contacts.addContact(contact, err => err
+      ? reject()
+      : resolve());
+  });

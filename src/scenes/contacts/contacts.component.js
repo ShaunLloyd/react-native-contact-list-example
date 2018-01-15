@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { SceneHeader, CheckBox } from 'components';
+import { SceneHeader, CheckBox, PrimaryPillButton, LocalizedText } from 'components';
 import { s } from 'styles';
 
 import { ContactsList } from './contacts-list';
@@ -13,7 +13,8 @@ type Props = {
   isFetchingContacts: boolean,
   fetchContacts: () => void,
   toggleShowSelectedOnly: () => void,
-  toggleContact: (Contact) => void
+  toggleContact: (Contact) => void,
+  navigateToAddContactForm: () => void,
 }
 
 export const ContactsComponent = ({
@@ -23,6 +24,7 @@ export const ContactsComponent = ({
   fetchContacts,
   toggleShowSelectedOnly,
   toggleContact,
+  navigateToAddContactForm,
 }: Props) => ( // eslint-disable-line
   <View
     style={[s.flx_i]}
@@ -45,5 +47,18 @@ export const ContactsComponent = ({
       refreshing={isFetchingContacts}
       onRefresh={fetchContacts}
     />
+    <View
+      style={[s.w_100]}
+    >
+      <PrimaryPillButton
+        style={[s.mv3, s.mh4]}
+        onPress={navigateToAddContactForm}
+      >
+        <LocalizedText
+          style={[s.white, s.f5, s.b]}
+          textKey="contactsList:addContact"
+        />
+      </PrimaryPillButton>
+    </View>
   </View>
 );

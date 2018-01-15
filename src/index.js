@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import { initializeNavigation } from 'utils';
 import { configureStore } from './store';
 import { scenes } from './scenes';
+import { SCENE_IDS } from './scenes/scenes.constants';
 
 const initializeApp = () => {
   const store = configureStore();
@@ -12,7 +13,7 @@ const initializeApp = () => {
     Provider,
     {
       screen: {
-        screen: 'view.contacts-list',
+        screen: SCENE_IDS.CONTACTS,
         navigatorStyle: {
           navBarHidden: true,
         },
