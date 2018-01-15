@@ -14,6 +14,7 @@ import {
   setFetchingContacts,
   fetchContacts,
 } from './contacts.actions';
+import { SCENE_IDS } from '../scenes.constants';
 
 const dispatchers = mapDispatchers({
   setContacts,
@@ -33,6 +34,8 @@ export const ContactsContainer = compose(
       : props.selectContact(contact.recordID),
     toggleShowSelectedOnly: props => () =>
       props.setShowOnlySelected(!props.showOnlySelected),
+    navigateToAddContactForm: props => () =>
+      props.navigator.push({ screen: SCENE_IDS.ADD_CONTACT }),
   }),
   lifecycle({
     componentDidMount() {

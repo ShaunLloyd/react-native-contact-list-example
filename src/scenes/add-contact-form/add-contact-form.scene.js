@@ -1,11 +1,11 @@
 import { palette } from 'styles';
 import type { Scene } from 'common';
-import { ContactsContainer } from './contacts.container';
+import { AddContactFormContainer } from './add-contact-form.container';
 import { SCENE_IDS } from '../scenes.constants';
 
-export const ContactsScene: Scene = {
-  screen: SCENE_IDS.CONTACTS,
-  component: ContactsContainer,
+export const AddContactFormScene: Scene = {
+  screen: SCENE_IDS.ADD_CONTACT,
+  component: AddContactFormContainer,
   navigatorStyle: {
     navBarHidden: true,
     statusBarColor: palette.primary,
