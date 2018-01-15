@@ -5,6 +5,7 @@ import com.facebook.react.ReactPackage;
 import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
+import com.rt2zz.reactnativecontacts.ReactNativeContacts;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,8 @@ public class MainApplication extends NavigationApplication {
      return Arrays.<ReactPackage>asList(
          new VectorIconsPackage(),
          new ReactNativeI18n(),
-         new LinearGradientPackage()
+         new LinearGradientPackage(),
+         new ReactNativeContacts()
      );
   }
 

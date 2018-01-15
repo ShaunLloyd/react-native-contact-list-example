@@ -1,4 +1,5 @@
 import type { ReduxAction } from 'common';
+import { fetchContactsService, transfromContactsFromDevice } from 'services';
 import type { Contact } from './contacts.types';
 import { CONTACTS_ACTIONS } from './contacts.constants';
 
@@ -31,3 +32,14 @@ export const setFetchingContacts = (bool: boolean): ReduxAction<Boolean> => ({
   type: CONTACTS_ACTIONS.SET_FETCHING_CONTACTS,
   payload: bool,
 });
+
+export const fetchContacts = () =>
+  (dispatch) => {
+    dispatch(setFetchingContacts(true));
+    fetchContactsService()
+      .then(transfromContactsFromDevice)
+      .then((contacts) => {
+        dispatch(setContacts(contacts));
+        dispatch(setFetchingContacts(false));
+      });
+  };

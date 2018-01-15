@@ -11,7 +11,8 @@
           "scenes": "scenes",
           "common": "common",
           "utils": "utils",
-          "locale": "locale"
+          "locale": "locale",
+          "services": "services"
         }
       }
     ]

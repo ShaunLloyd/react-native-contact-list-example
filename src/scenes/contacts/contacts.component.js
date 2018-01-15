@@ -10,6 +10,8 @@ import type { Contact } from './contacts.types';
 type Props = {
   contacts: Contact[],
   showOnlySelected: boolean,
+  isFetchingContacts: boolean,
+  fetchContacts: () => void,
   toggleShowSelectedOnly: () => void,
   toggleContact: (Contact) => void
 }
@@ -17,6 +19,8 @@ type Props = {
 export const ContactsComponent = ({
   contacts,
   showOnlySelected,
+  isFetchingContacts,
+  fetchContacts,
   toggleShowSelectedOnly,
   toggleContact,
 }: Props) => ( // eslint-disable-line
@@ -38,6 +42,8 @@ export const ContactsComponent = ({
     <ContactsList
       contacts={contacts}
       onContactSelect={toggleContact}
+      refreshing={isFetchingContacts}
+      onRefresh={fetchContacts}
     />
   </View>
 );
