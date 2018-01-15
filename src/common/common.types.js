@@ -11,10 +11,10 @@ export interface Scene {
   navigatorStyle?: any,
 }
 
-export type ReduxAction = {
+export type ReduxAction<P, M> = {
   type: string,
-  payload: any,
-  meta?: any,
+  payload?: P,
+  meta?: M,
 }
 
 export type StyleType = Array<StyleObj>;
