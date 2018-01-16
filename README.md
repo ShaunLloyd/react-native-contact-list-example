@@ -1,7 +1,7 @@
 # React Native Contact List Example
 #### An Example contact application using React Native, Redux, and functional programming
 
-**CircleCI: **
+**CircleCI:**
 [![CircleCI](https://circleci.com/gh/ShaunLloyd/react-native-contact-list-example/tree/master.svg?style=svg)](https://circleci.com/gh/ShaunLloyd/react-native-contact-list-example/tree/master)
 
 ## Getting Started
