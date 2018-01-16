@@ -1,6 +1,8 @@
-# React Native Starter
-#### Opinionated boilerplate code for creating a localized react native application.
+# React Native Contact List Example
+#### An Example contact application using React Native, Redux, and functional programming
 
+**CircleCI: **
+[![CircleCI](https://circleci.com/gh/ShaunLloyd/react-native-contact-list-example/tree/master.svg?style=svg)](https://circleci.com/gh/ShaunLloyd/react-native-contact-list-example/tree/master)
 
 ## Getting Started
 
@@ -35,18 +37,3 @@ We make use of several javascript packages in this project. Some of the main one
 - [reselect:](https://github.com/reactjs/reselect) Used to create selectors for the redux store.
 
 - [i18next:](https://www.i18next.com/) Localization package for application copy.
-
-
-## Renaming The Project
-
-To rename the project you will need to do the following:
-
-- Change `name` and `displayName` in `./app.json`
-
-- Delete the `./android` and `./ios` directories
-
-- run the `react-native eject` command. This will generate new `./android` and `./ios` directories with the new name and display name
-
-- Relink the react-native packages for both android and iOS. We recommend doing this manually as `react-native link` doesn't always get it right.
-
-   - **NOTE:** `react-native-navigation` **MUST** be linked manually as it alters how react native bootstraps the application. Instructions on linking `react-native-navigation` can be found [here](https://wix.github.io/react-native-navigation/#/)
